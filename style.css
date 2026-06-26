@@ -1,0 +1,86 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: #1a2e1a;
+  color: #e8f5e9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  text-align: center;
+  color: #a5d6a7;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+video {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #388e3c;
+  display: block;
+}
+
+.description {
+  max-width: 680px;
+  text-align: center;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  line-height: 1.7;
+  color: #c8e6c9;
+}
+
+#toggle-btn {
+  padding: 0.65rem 1.75rem;
+  font-size: 1rem;
+  background-color: #2e7d32;
+  color: #fff;
+  border: 2px solid #66bb6a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#toggle-btn:hover {
+  background-color: #388e3c;
+}
+
+#toggle-btn:focus-visible {
+  outline: 3px solid #a5d6a7;
+  outline-offset: 3px;
+}
+
+#toggle-btn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem 0.75rem;
+  }
+
+  #toggle-btn {
+    width: 100%;
+  }
+}
